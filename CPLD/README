@@ -1,0 +1,13 @@
+This project is a very old project to generate, by multiple ways, 2 and 3 phases sinusoidal low frequency signals.
+
+The analogue way is a little bit tricky to keep the amplitude, the frequency and the phase relations.
+The digital way to generate square signals and to filter in order to get rid of the 3, 5, 7 etc... harmonics requires many high precision capacitors and resistor. 
+
+The projects, here, generate an approximately sinusoidal signal to be filtered by only a basic second order S&K. The best compromise is to generate 3 bits signals.
+* The last one but still old uses a big CPLD with many output pins.
+  The code is written, using the VHDL language.
+  It follows the 2010's good practices to always write as a 2 processes architectures (one combinatorial and one latch). This is intended to avoid accidental latches but make everything tricky, especially if latches are required!!
+  There is a test to run it and view using a wav files viewer.
+* Another one is an older 21 74HCxx circuit.
+  The schema, a VHDL export and basic VHDL models are provided.
+  There is a test file to run them and view using a wav files viewer.
