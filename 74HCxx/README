@@ -5,7 +5,7 @@ It consume about 20 integrated circuits. However, it does not require any CPLD n
 The schematic diagram states the digital part only, the resistors and the filters are out of scope of this project.
 
 The VHDL files are provided. There are no documentation as it is an export of the CAD software.
-A behavior is written using the VHDL language as well. There are no documentation as the references and the pin number follows exactly the one in the datasheets of the circuits.
+A behavior of the 74HCxx (in use) is written using the VHDL language as well. There are no documentation as the references and the pin number follows exactly the one in the datasheets of the circuits.
 A test runs the project but some clean up is needed before publishing.
 
 The parts list by value and by refdes does not contain the resistors.
