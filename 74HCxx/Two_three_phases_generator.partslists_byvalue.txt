@@ -1,0 +1,13 @@
+.START
+..device	value	tolerance	comment	footprint	quantity	refdes
+7400	unknown	unknown	unknown	DIP14	2	U20 U7
+74138	unknown	unknown	unknown	DIP16	2	U19 U8
+74163	unknown	unknown	unknown	DIP16	3	U1 U18 U2
+7420	unknown	unknown	unknown	DIP14	1	U21
+74273	unknown	unknown	unknown	DIP20	5	U12 U13 U14 U15 U6
+74283	unknown	unknown	unknown	DIP16	2	U4 U5
+7473	unknown	unknown	unknown	DIP14	2	U16 U17
+7485	unknown	unknown	unknown	DIP16	2	U22 U23
+7486	unknown	unknown	unknown	DIP14	3	U10 U11 U9
+VTXO	unknown	unknown	unknown	unknown	1	U24
+.END

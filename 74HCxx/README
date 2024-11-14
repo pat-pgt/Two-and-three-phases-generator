@@ -1,1 +1,14 @@
-Some cleanup has to be done before publishing
+This is a 3 bit version. The outputs need 4+2+1+1 resistors (see in the CPLD folder).
+
+It consume about 20 integrated circuits. However, it does not require any CPLD nor FPGA programming device.
+
+The schematic diagram states the digital part only, the resistors and the filters are out of scope of this project.
+
+The VHDL files are provided. There are no documentation as it is an export of the CAD software.
+A behavior is written using the VHDL language as well. There are no documentation as the references and the pin number follows exactly the one in the datasheets of the circuits.
+A test runs the project but some clean up is needed before publishing.
+
+The parts list by value and by refdes does not contain the resistors.
+
+The PCB was buggy, due to a footprint error.
+A narrow 74HC273 package was found for the SOIC20 wrongly narrow. Their pin are folded under the chip to make a king of PLCC. It is a very old project, I can't find the fix.
