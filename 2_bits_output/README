@@ -1,0 +1,6 @@
+This version is a two bits output.
+
+Due to the symmetries of the sine and the cosine, it is very simple to implement, both for 74HC and CPLD.
+
+The 4 output states are not linear. There is only a symmetry between the 2 low states and the 2 high states. The levels are 0, 0.2929, 0.707, 1. The low and the high resistor in parallel should produce the reference current. The low and the high resistor connected to opposite level should produce the reduced current. The low resistor, is then, higher than the high one. There is no rail to rail problem as it can be considered in the calculation.
+

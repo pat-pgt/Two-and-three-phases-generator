@@ -11,3 +11,6 @@ The projects, here, generate an approximately sinusoidal signal to be filtered b
 * Another one is an older 21 74HCxx circuit.
   The schema, a VHDL export and basic VHDL models are provided.
   There is a test file to run them and view using a wav files viewer.
+* Another one is a 2 bits only output.
+  It is a two phases only circuit.
+  It needs some filtering on the output but lighter than squares signals.
