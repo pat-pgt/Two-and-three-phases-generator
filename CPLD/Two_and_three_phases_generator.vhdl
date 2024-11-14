@@ -69,6 +69,9 @@ use ieee.std_logic_1164.all, ieee.numeric_std.all, ieee.math_real.all, work.Two_
 --!   The high bits uses 0.05% differential, 2% absolute networks,
 --!   The low bits can use 7 independent resistors as
 --!     4 in series, 2 in series and 1.\n
+--! This file is the digital part only. It does not include the current to voltage converter
+--!   between the common point of the resistors and the ground
+--!   (or a very low resistor for low output amplitude).
 entity DAC_lowcost is
   generic(
     start_bits : positive := 2);
@@ -103,7 +106,7 @@ use ieee.std_logic_1164.all, ieee.numeric_std.all, ieee.math_real.all, work.Two_
 
 --! Generates bi and triphase signals
 --!
---! It is intended for a low number of output bits and a high master clock.\n
+--! It is intended for a low number of output bits and a high frequency master clock.\n
 --! The goal is to use low cost and long term converter with resistors
 --! connected on the (output) pins.\n
 --! The counter describing a full rotation should be as large as possible,
@@ -136,11 +139,11 @@ end entity multiphases_counter;
 
 --! Architecture RTL of multiphases_counter
 --!
---! Since the master clock is high the the number of bits is low,
+--! Since the master clock frequency is high the the number of bits is low,
 --!   we are not proceeding by calculating the value at each time,
 --!   but we populate a table of the times in which the output changes.\n
 --! To avoid excessive resources consumption, only one signal calculator is instantiated.
---! The output buffer is set with the result and the counter spins by 90 degrees.
+--! The PBT1 buffer is set with the result and the counter spins by 90 degrees.
 --! the PB2 buffer is set with the result and the counter spins by 30 degrees.
 --! the PT2 buffer is set with the result and the counter spins by 120 degrees.
 --! the PT3 buffer is set with the result and the counter spins by 120 degrees
